@@ -3,6 +3,8 @@ import csv
 import os
 import pathlib
 
+# while read line ; do mv "$line" $(date +%s) ; sleep 2 ; done <<< $(ls -ltr | cut -d ' ' -f 9-)
+
 base_path = pathlib.Path().absolute().parent
 data_path = base_path / "data_2"
 files = os.scandir(data_path)
